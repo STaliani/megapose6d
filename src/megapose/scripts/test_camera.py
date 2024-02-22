@@ -25,7 +25,7 @@ def detect_objects(image):
      
      # Convert the prediction to a Python dictionary
      #prediction_dict = {key: prediction[0][key].tolist() for key in prediction[0]}
-     prediction_list = [{"label": str(label.item()), "bbox_modal": bbox.tolist()} for label, bbox in zip(prediction[0]["labels"], prediction[0]["boxes"])]
+     prediction_list = [{"label": str(label.item()), "bbox_modal": bbox.tolist()} for label, bbox, score in zip(prediction[0]["labels"], prediction[0]["boxes"], prediction[0]["scores"]) if score.item() > 0.8]
      return prediction_list
 #try:
 # Create a context object. This object owns the handles to all connected realsense devices

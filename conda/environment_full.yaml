@@ -16,7 +16,7 @@ dependencies:
   - ipython
   - ipykernel
   - jupyterlab
-  - notebook
+  - notebook==6.4.12
   - nb_conda_kernels
   - jupyter_contrib_nbextensions
   - pinocchio
@@ -42,7 +42,7 @@ dependencies:
       - xarray 
       - pandas
       - matplotlib
-      - bokeh
+      - bokeh==2.4.3
       - plyfile 
       - trimesh 
       - ipdb 
@@ -67,3 +67,4 @@ dependencies:
       - opencv-contrib-python 
       - roma 
       - torchgeometry
+      - pyrealsense2
